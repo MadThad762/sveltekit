@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "node_modules/.bin/prisma generate && vite build",
+		"build": "node_modules/.bin/prisma generate vite build",
 		"postinstall": "prisma generate",
 		"preview": "vite preview",
 		"test": "playwright test",
