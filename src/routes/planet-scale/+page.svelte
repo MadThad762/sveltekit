@@ -1,19 +1,17 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import type { PageData } from './$types';
 
 	/** @type {import('./$types').PageData} */
-	export let data;
-	console.log('data', data);
-	console.log('$page data', $page.data);
+	export let data: PageData;
 </script>
 
-{#if $page.data.session}
+{#if data.session}
 	<div class="max-w-screen-2xl px-6 lg:px-8 mx-auto mt-20">
 		<h1 class="text-5xl text-center mx-auto font-semibold text-pink-500">
 			Planet Scale with Prisma
 		</h1>
 		<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 mt-5">
-			{#each $page.data.stars as star}
+			{#each data?.stars as star (star.id)}
 				<div class="w-full col-span-1 aspect-video object-cover">
 					<h2 class="text-xl font-semibold">{star.name}</h2>
 					<img
