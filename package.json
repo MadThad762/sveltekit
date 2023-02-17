@@ -40,7 +40,8 @@
 		"@auth/core": "^0.4.0",
 		"@auth/sveltekit": "^0.2.1",
 		"@prisma/client": "^4.10.1",
-		"contentful": "^9.3.2",
+		"graphql": "^16.6.0",
+		"graphql-request": "^5.1.0",
 		"prisma": "^4.10.1"
 	}
 }

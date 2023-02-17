@@ -1,4 +1,4 @@
-import prisma from '$lib/Prisma';
+import prisma from '$lib/prisma';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
